@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 47% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 222 47% 14%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 12%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
+
+    --severity-low: 142 76% 46%;
+    --severity-medium: 45 93% 55%;
+    --severity-high: 0 84% 60%;
+
+    --sidebar-background: 222 47% 7%;
+    --sidebar-foreground: 215 20% 65%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 91% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 30% 15%;
+    --sidebar-ring: 217 91% 60%;
+
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 76% 46%;
+    --chart-3: 45 93% 55%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 280 67% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .severity-low {
+    color: hsl(var(--severity-low));
+  }
+  .severity-medium {
+    color: hsl(var(--severity-medium));
+  }
+  .severity-high {
+    color: hsl(var(--severity-high));
+  }
+  .bg-severity-low {
+    background-color: hsl(var(--severity-low));
+  }
+  .bg-severity-medium {
+    background-color: hsl(var(--severity-medium));
+  }
+  .bg-severity-high {
+    background-color: hsl(var(--severity-high));
+  }
+  .border-severity-low {
+    border-color: hsl(var(--severity-low));
+  }
+  .border-severity-medium {
+    border-color: hsl(var(--severity-medium));
+  }
+  .border-severity-high {
+    border-color: hsl(var(--severity-high));
+  }
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.15);
+  }
+}
